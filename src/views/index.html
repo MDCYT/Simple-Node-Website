@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= title %></title>
+    <%- include ('partials/head.html')%>
+
+</head>
+
+<body>
+
+    <%- include ('partials/navigation.html')%>
+
+   <div class="container">
+       <header class="row">
+          <div class="col-lg-12 text-center">
+              <img src="/img/Discord.webp" class="animate__bounceIn" alt="Discord Logo">
+          </div>
+       </header>
+   </div>
+
+   <!-- Seccion uno-->
+   <div class="container-fluid" id="about">
+       <div class="row bg-dark text-white p-5 text-center">
+           <div class="col-sm-6">
+               <i class="fab fa-discord fa-10x"></i>
+           </div>
+           <div class="col sm-6">
+               <h3>Una perfecta plataforma para comunicarse entre amigos</h3>
+               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, doloribus corrupti excepturi facere aliquam deserunt cumque voluptatibus doloremque recusandae illum inventore odit laboriosam impedit eum reiciendis accusantium quaerat deleniti a. Explicabo dicta quibusdam iusto voluptatem veniam ex aliquid amet laborum.</p>
+           </div>
+       </div>
+   </div>
+
+   <%- include ('partials/footer.html')%>
+
+
+</body>
+
+</html>
