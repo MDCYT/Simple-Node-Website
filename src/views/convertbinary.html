@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Resultado</title>
+    <%- include ('partials/head.html')%>
+
+</head>
+
+<body>
+
+    <%- include ('partials/navigation.html')%>
+
+    <div class="container p-5">
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <div class="card animate__animated animate__flipInY">
+                    <div class="card-header bg-dark text-white text-center">
+                        <h3>Convertir Binario</h3>
+                    </div>
+                    <div class="list-group">
+                        <a class="list-group-item list-group-item-action">
+                          <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Texto Original
+                            </h5>
+                          </div>
+                          <p class="mb-1"><%= texto %></p>
+                        </a>
+                        <a class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                              <h5 class="mb-1">Texto en Binario
+                              </h5>
+                            </div>
+                            <p class="mb-1"><%= binario %></p>
+                          </a>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <%- include ('partials/footer.html')%>
+
+
+</body>
+
+</html>

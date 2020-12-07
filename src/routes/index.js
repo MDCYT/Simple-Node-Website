@@ -69,5 +69,29 @@ router.get('/redpanda', async (req, res) => {
     res.render('redpanda.html', { image: redpanda })
 });
 
+router.get('/binary', async (req, res) => {
+
+    let redpanda = await utils.redpanda()
+ 
+    res.render('binary.html', { image: redpanda })
+});
+
+router.get('/binary/convert', async (req, res) => {
+
+    const texto = req.query.text
+  
+    function convertir(text) {
+        var length = text.length,
+            output = [];
+        for (var i = 0; i < length; i++) {
+            var bin = text[i].charCodeAt().toString(2);
+            output.push(Array(8 - bin.length + 1).join("0") + bin);
+        }
+        return output.join(" ");
+        
+    }
+
+    res.render('convertbinary.html', { binario: convertir(texto), texto: texto })
+});
 
 module.exports= router
