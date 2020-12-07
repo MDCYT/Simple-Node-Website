@@ -121,4 +121,34 @@ router.get('/binary/convert', async (req, res) => {
     res.render('convertbinary.html', { binario: resultado, texto: texto, entrada: input, salida: output })
 });
 
+router.get('/translate', async (req, res) => {
+
+    const translate = require('node-google-translate-skidz');
+
+    const texto = req.query.text
+
+    const tipo = req.query.entrada
+
+    const salida = req.query.salida
+
+
+        translate({
+            text: texto || "No a ingresado Texto",
+            source: tipo || "es", // Este es la fuente, es decir el idioma que queremos pasar a el idioma puesto en target, ya saben con codigo i18n.
+            target: salida || "es" // El idioma en i18n al que queremos traducir
+        }, function (result) {
+                
+            const resultado = result
+             
+        var textofinal = texto || "No a ingresado texto"
+
+        var input = "Texto Original"
+
+        var output = "Texto Convertido a Binario"
+
+
+                res.render('translate.html', { respuesta: resultado, texto: textofinal, entrada: input, salida: output })
+            });
+});
+
 module.exports= router
