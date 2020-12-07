@@ -48,4 +48,26 @@ router.get('/fox', async (req, res) => {
     res.render('fox.html', { image: fox })
 });
 
+router.get('/bird', async (req, res) => {
+
+    let bird = await utils.bird()
+ 
+    res.render('bird.html', { image: bird })
+});
+
+router.get('/koala', async (req, res) => {
+
+    let koala = await utils.koala()
+ 
+    res.render('koala.html', { image: koala })
+});
+
+router.get('/redpanda', async (req, res) => {
+
+    let redpanda = await utils.redpanda()
+ 
+    res.render('redpanda.html', { image: redpanda })
+});
+
+
 module.exports= router
