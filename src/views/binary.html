@@ -19,10 +19,16 @@
             <div class="col-md-4 offset-md-4">
                 <div class="card animate__animated animate__flipInY">
                     <div class="card-header bg-dark text-white text-center">
-                        <h3>Convertir a Binario</h3>
+                        <h3>Convertidor Binario</h3>
                     </div>
                     <div class="card-body">
                         <form action="binary/convert">
+                            <div class="form-group">
+                                <select class="form-control" name="type" value = "" id="" required>
+                                    <option>Texto a Binario</option>
+                                    <option>Binario a Texto</option>
+                                  </select>
+                            </div>
                             <div class="form-group">
                                 <textarea class="form-control" name="text" value = "" id="" cols="30" rows="10" placeholder="Mensaje" required></textarea>
                             </div>
@@ -31,6 +37,7 @@
                                     Convertir
                                 </button>
                             </div>
+
                         </form>
                     </div>
                 </div>

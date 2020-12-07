@@ -79,19 +79,46 @@ router.get('/binary', async (req, res) => {
 router.get('/binary/convert', async (req, res) => {
 
     const texto = req.query.text.replace("+", " ")
-  
-    function convertir(text) {
-        var length = text.length,
-            output = [];
-        for (var i = 0; i < length; i++) {
-            var bin = text[i].charCodeAt().toString(2);
-            output.push(Array(8 - bin.length + 1).join("0") + bin);
-        }
-        return output.join(" ");
-        
-    }
 
-    res.render('convertbinary.html', { binario: convertir(texto), texto: texto })
+    const tipo = req.query.type
+
+    if (tipo === "Texto a Binario") {
+  
+        function convertir(text) {
+            var length = text.length,
+                output = [];
+            for (var i = 0; i < length; i++) {
+                var bin = text[i].charCodeAt().toString(2);
+                output.push(Array(8 - bin.length + 1).join("0") + bin);
+            }
+            return output.join(" ");
+        
+        }
+
+        var resultado = convertir(texto)
+
+        var input = "Texto Original"
+
+        var output = "Texto Convertido a Binario"
+
+    } else
+        if (tipo === "Binario a Texto") {
+            var ABC = {
+                toAscii: function (bin) {
+                    return bin.replace(/\s*[01]{8}\s*/g, function (bin) {
+                        return String.fromCharCode(parseInt(bin, 2))
+                    })
+                }
+            };
+
+            var resultado = ABC.toAscii(texto)
+
+            var input = "Binario Original"
+
+            var output = "Texto Convertido del Binario"
+        }
+
+    res.render('convertbinary.html', { binario: resultado, texto: texto, entrada: input, salida: output })
 });
 
 module.exports= router
