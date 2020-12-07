@@ -78,7 +78,7 @@ router.get('/binary', async (req, res) => {
 
 router.get('/binary/convert', async (req, res) => {
 
-    const texto = req.query.text
+    const texto = req.query.text.replace("+", " ")
   
     function convertir(text) {
         var length = text.length,
