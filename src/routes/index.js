@@ -138,16 +138,41 @@ router.get('/translate', async (req, res) => {
             target: salida || "es"
         }, function (result) {
                 
-            const resultado = result
+            const resultado = result.translation
              
         var textofinal = texto || "No a ingresado texto"
 
         var input = "Texto Original"
 
-        var output = "Texto Convertido a Binario"
+        var output = "Texto Traducido"
 
 
                 res.render('translate.html', { respuesta: resultado, texto: textofinal, entrada: input, salida: output })
+            });
+});
+
+router.get('/translate.json', async (req, res) => {
+
+    const translate = require('node-google-translate-skidz');
+
+    const texto = req.query.text
+
+    if(!texto) return res.json({"error": "No a puesto ningun texto, ejemplo de uso correcto ?text=Hola&entrada=es&salida=en"})
+
+    const tipo = req.query.entrada
+
+    const salida = req.query.salida
+
+
+        translate({
+            text: texto || "No a ingresado Texto",
+            source: tipo || "es", 
+            target: salida || "es"
+        }, function (result) {
+                
+            const resultado = result.translation
+
+                res.json({"Respuesta": resultado})
             });
 });
 
