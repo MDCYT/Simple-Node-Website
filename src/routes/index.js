@@ -134,8 +134,8 @@ router.get('/translate', async (req, res) => {
 
         translate({
             text: texto || "No a ingresado Texto",
-            source: tipo || "es", // Este es la fuente, es decir el idioma que queremos pasar a el idioma puesto en target, ya saben con codigo i18n.
-            target: salida || "es" // El idioma en i18n al que queremos traducir
+            source: tipo || "es", 
+            target: salida || "es"
         }, function (result) {
                 
             const resultado = result
