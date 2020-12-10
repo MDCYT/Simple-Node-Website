@@ -6,7 +6,7 @@ const utils = require('discord-utilities-js')
 
 
 router.get('/', (req, res) => {
-    res.render('index.html', { title: "Mi Primera Pagina", description: "La pagina de Inicio de este proyectode GitHub" })
+    res.render('index.html', { title: "Mi Primera Pagina", description: "La pagina de Inicio de este proyecto de GitHub" })
 });
 
 router.get('/contact', (req, res) => {
@@ -17,63 +17,61 @@ router.get('/cat', async (req, res) => {
 
     let cat = await utils.cat()
 
-    res.render('cat.html', { image: cat, title: "Gato", description: "Muestra Gatos Randoms" })
+    res.render('cat.html', { image: cat, title: "Gatos", description: "Muestra Gatos Randoms" })
 });
 
 router.get('/dog', async (req, res) => {
 
     let dog = await utils.dog()
 
-    res.render('dog.html', { image: dog })
+    res.render('dog.html', { image: dog, title: "Perros", description: "Muestra Perros Randoms" })
 });
 
 router.get('/bear', async (req, res) => {
 
     let bear = await utils.bear()
 
-    res.render('bear.html', { image: bear })
+    res.render('bear.html', { image: bear, title: "Osos", description: "Muestra Osos Randoms" })
 });
 
 router.get('/panda', async (req, res) => {
 
     let panda = await utils.panda()
 
-    res.render('panda.html', { image: panda })
+    res.render('panda.html', { image: panda, title: "Pandas", description: "Muestra Pandas Randoms" })
 });
 
 router.get('/fox', async (req, res) => {
 
     let fox = await utils.fox()
 
-    res.render('fox.html', { image: fox })
+    res.render('fox.html', { image: fox, title: "Zorros OwO", description: "Muestra Zorros Randoms UwU" })
 });
 
 router.get('/bird', async (req, res) => {
 
     let bird = await utils.bird()
 
-    res.render('bird.html', { image: bird })
+    res.render('bird.html', { image: bird, title: "Pajaros", description: "Muestra Pajaros Randoms" })
 });
 
 router.get('/koala', async (req, res) => {
 
     let koala = await utils.koala()
 
-    res.render('koala.html', { image: koala })
+    res.render('koala.html', { image: koala, title: "Koalas", description: "Muestra Koalas Randoms" })
 });
 
 router.get('/redpanda', async (req, res) => {
 
     let redpanda = await utils.redpanda()
 
-    res.render('redpanda.html', { image: redpanda })
+    res.render('redpanda.html', { image: redpanda, title: "Pandas Rojos", description: "Muestra Pandas Rojos Randoms" })
 });
 
 router.get('/binary', async (req, res) => {
 
-    let redpanda = await utils.redpanda()
-
-    res.render('binary.html', { image: redpanda })
+    res.render('binary.html', { title: "Binario", description: "Convierte texto en binario o viceversa"  })
 });
 
 router.get('/binary/convert', async (req, res) => {
@@ -118,7 +116,7 @@ router.get('/binary/convert', async (req, res) => {
             var output = "Texto Convertido del Binario"
         }
 
-    res.render('convertbinary.html', { binario: resultado, texto: texto, entrada: input, salida: output })
+    res.render('convertbinary.html', { binario: resultado, texto: texto, entrada: input, salida: output, title: "Texto ya convertido del binario o viceversa", description: "No deberias estar aqui :jotarosa:"  })
 });
 
 router.get('/translate', async (req, res) => {
@@ -147,7 +145,8 @@ router.get('/translate', async (req, res) => {
         let output = "Texto Traducido"
 
 
-        res.render('translate.html', { respuesta: resultado, texto: textofinal, entrada: input, salida: output })
+            res.render('translate.html', {
+                respuesta: resultado, texto: textofinal, entrada: input, salida: output, title: "Traductor", description: "Aqui puedes traducir entre idiomas" })
     });
 });
 
