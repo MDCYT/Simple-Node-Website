@@ -6,18 +6,18 @@ const utils = require('discord-utilities-js')
 
 
 router.get('/', (req, res) => {
-    res.render('index.html', { title: "Mi Primera Pagina" })
+    res.render('index.html', { title: "Mi Primera Pagina", description: "La pagina de Inicio de este proyectode GitHub" })
 });
 
 router.get('/contact', (req, res) => {
-    res.render('contact.html', { title: "Pagina de Contacto" })
+    res.render('contact.html', { title: "Pagina de Contacto", description: "Pagina de ejemplo de Contacto" })
 });
 
 router.get('/cat', async (req, res) => {
 
     let cat = await utils.cat()
 
-    res.render('cat.html', { image: cat })
+    res.render('cat.html', { image: cat, title: "Gato", description: "Muestra Gatos Randoms" })
 });
 
 router.get('/dog', async (req, res) => {
