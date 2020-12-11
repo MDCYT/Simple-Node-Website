@@ -58,3 +58,23 @@ div.traductor-right {
         display:inline-block
     }
   }
+
+  @media only screen and (max-width: 304px) {
+    footer {
+        position: fixed;
+        height: 80px;
+    } 
+    body {
+        margin-bottom: 80px;
+    }      
+  }
+
+  @media only screen and (max-width: 206px) {
+    footer {
+        position: fixed;
+        height: 120px;
+    }       
+    body {
+        margin-bottom: 120px;
+    } 
+  }
