@@ -116,7 +116,7 @@ router.get('/binary/convert', async (req, res) => {
             var output = "Texto Convertido del Binario"
         }
 
-    res.render('convertbinary.html', { binario: resultado, texto: texto, entrada: input, salida: output, title: "Texto ya convertido del binario o viceversa", description: "No deberias estar aqui :jotarosa:"  })
+    res.render('convertbinary.html', { binario: resultado, texto: texto, entrada: input, salida: output, title: "Texto ya convertido del binario o viceversa", description: "No deberias estar aqui :jotarosad:"  })
 });
 
 router.get('/translate', async (req, res) => {
@@ -154,27 +154,28 @@ router.get('/translate.json', async (req, res) => {
 
     let translate = require('node-google-translate-skidz');
 
-    let idiomas = require('../public/json/idiomas.json')
+    const idiomas = require('../public/json/idiomas.json')
 
     let texto = req.query.text
 
-    if (!texto) return res.json({ "error": "No a puesto ningun texto, ejemplo de uso correcto ?text=Hola&entrada=es&salida=en" })
+    if (!texto) return res.status(400).json({ "error": "No a puesto ningun texto, ejemplo de uso correcto ?text=Hola&entrada=es&salida=en" })
 
     let tipo = req.query.entrada
 
-    if (!tipo) return res.json({ "error": "No a puesto ningun idioma de entrada, ejemplo de uso correcto ?text=Hola&entrada=es&salida=en" })
+    if(!idiomas.some(word => tipo.includes(word))) return res.status(400).json({ "error": "El idioma que a introducido de entrada es invalido, prueba con un idioma valida, ejemplos de idiomas validos \"en\", \"es\" \"ru\", etc " })
 
-    if (!tipo.includes(idiomas)) return res.json({ "error": "El idioma de entrada que ha puesto no esta en nuestra lista de idiomas validos, ejemplo de uso correcto ?text=Hola&entrada=es&salida=en" })
+    if (!tipo) return res.status(400).json({ "error": "No a puesto ningun idioma de entrada, ejemplo de uso correcto ?text=Hola&entrada=es&salida=en" })
 
-    if (tipo.length != 2) return res.json({ "error": "El idioma de entrada no es valido, ejemplo de uso correcto ?text=Hola&entrada=es&salida=en" })
+    if (tipo.length != 2) return res.status(400).json({ "error": "El idioma de entrada no es valido, ejemplo de uso correcto ?text=Hola&entrada=es&salida=en" })
 
     let salida = req.query.salida
 
-    if (!salida) return res.json({ "error": "No a puesto ningun idioma de salida, ejemplo de uso correcto ?text=Hola&entrada=es&salida=en" })
+    if (!salida) return res.status(400).json({ "error": "No a puesto ningun idioma de salida, ejemplo de uso correcto ?text=Hola&entrada=es&salida=en" })
 
-    if (!salida.includes(idiomas)) return res.json({ "error": "El idioma de salida que ha puesto no esta en nuestra lista de idiomas validos, ejemplo de uso correcto ?text=Hola&entrada=es&salida=en" })
+    if(!idiomas.some(word => salida.includes(word))) return res.status(400).json({ "error": "El idioma que a introducido de salida es invalido, prueba con un idioma valida, ejemplos de idiomas validos \"en\", \"es\" \"ru\", etc " })
 
-    if (salida.length != 2) return res.json({ "error": "El idioma de salida no es valido, ejemplo de uso correcto ?text=Hola&entrada=es&salida=en" })
+
+    if (salida.length != 2) return res.status(400).json({ "error": "El idioma de salida no es valido, ejemplo de uso correcto ?text=Hola&entrada=es&salida=en" })
 
     translate({
         text: texto || "No a ingresado Texto",
