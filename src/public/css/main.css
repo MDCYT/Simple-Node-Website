@@ -55,6 +55,18 @@ div.traductor-right {
     color: #3498DB ;
 }
 
+.animal-image {
+        display:block;
+        margin:auto;
+        margin-top: 20px;
+}
+
+.animal-image-responsive {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
 @media only screen and (max-width: 767px) {
     div.traductor-left {
         width: 100%; 
