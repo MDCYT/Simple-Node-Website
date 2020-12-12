@@ -7,8 +7,8 @@ Aqui encontraras secciones utiles de como user este proyecto de GitHub:
 
 - [Instalación](#Instalación)
 - [Configuraciones](#Configuraciones)
-- [Usos](#uses)
-  - [Imagenes Randoms](#random-images)
+- [Usos](#Usos)
+  - [Imagenes Randoms](#Imagenes-Randoms)
     - [Perros Randoms](#random-dogs)
     - [Gatos Randoms](#random-cats)
     - [Aves Randoms](#random-birds)
@@ -69,3 +69,7 @@ El archivo **.env** se debe ver algo asi
 ```env
 PORT=3000 ///Aqui podras cambiar el puerto del proyecto
 ```
+
+## Usos
+
+### Imagenes Randoms
