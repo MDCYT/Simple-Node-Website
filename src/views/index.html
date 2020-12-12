@@ -3,102 +3,119 @@
 
 <head>
     <%- include ('partials/head.html')%>
-    <meta name="description" content="<%= description %>">
-    <meta property="og:description" content="<%= description %>" />
-    <title><%= title %></title>
-    <meta property="og:title" content="<%= title %>" />
+        <meta name="description" content="<%= description %>">
+        <meta property="og:description" content="<%= description %>" />
+        <title>
+            <%= title %>
+        </title>
+        <meta property="og:title" content="<%= title %>" />
 </head>
 
 <body>
 
     <%- include ('partials/navigation.html')%>
 
-    <div class="container">
-        <header class="row">
-            <div class="col-lg-12 text-center">
-                <img src="/img/logo.png" class="animate__bounceIn" alt="Logo" width="250px">
-            </div>
-        </header>
-    </div>
+        <div class="container">
+            <header class="row">
+                <div class="col-lg-12 text-center">
+                    <img src="/img/logo.png" class="animate__bounceIn" alt="Logo" width="250px">
+                </div>
+            </header>
+        </div>
 
-    <!-- Seccion uno-->
-    <div class="container-fluid" id="about">
-        <div class="row bg-dark text-white p-5 text-center">
-            <div class="col-sm-6">
-                <i class="fab fa-discord fa-10x animate__bounceIn"></i>
-            </div>
-            <div class="col sm-6">
-                <h3>Una perfecta plataforma para comunicarse entre amigos</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, doloribus corrupti excepturi facere
-                    aliquam deserunt cumque voluptatibus doloremque recusandae illum inventore odit laboriosam impedit
-                    eum reiciendis accusantium quaerat deleniti a. Explicabo dicta quibusdam iusto voluptatem veniam ex
-                    aliquid amet laborum.</p>
+        <!-- Seccion uno-->
+        <div class="container-fluid" id="about">
+            <div class="row bg-dark text-white p-5 text-center">
+                <div class="col-sm-6">
+                    <i class="fas fa-users fa-10x animate__bounceIn"></i>
+                </div>
+                <div class="col sm-6">
+                    <h3>Pagina de Prueba</h3>
+                    <p>En esta pagina se hacen pruebas de weas que hago aunque tambien la puedes usar como plantilla
+                        para tus propios proyectos asi que siente libre de editar esto a tu gusto si deseas</p>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- Seccion dos -->
-    <div class="container-fluid" id="about">
-        <div class="row bg-dark text-white p-5 text-center">
-            <div class="col sm-6">
-                <h3>Una perfecta plataforma para comunicarse entre amigos</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla maiores corrupti nisi suscipit autem
-                    saepe? Doloribus debitis possimus eius! Quia rerum animi, a, quasi id, reprehenderit recusandae
-                    veniam dicta totam expedita voluptatibus laboriosam eius nemo praesentium! Consequatur voluptatum
-                    accusamus repellendus reprehenderit optio libero! Ea minus commodi ut! Deserunt perferendis
-                    laudantium explicabo maiores eum eos exercitationem quod in similique sequi! Quam, voluptas. Eius
-                    non accusantium accusamus nulla quam repellat molestias blanditiis dicta quae. Harum, quas animi?
-                </p>
+        <!-- Seccion dos -->
+        <div class="container-fluid" id="about">
+            <div class="row bg-dark text-white p-5 text-center">
+                <div class="col sm-6">
+                    <h3>Aqui algunas cosas que posee este proyecto</h3>
+                    <p>Aqui puedes ver algunas cosas que e hecho en esta pagina los cuales puedesusar como ejemplos o
+                        reusarlos en tu propia pagina si quieres, tambien si encuentras algun bug usando alguna función,
+                        puedes reportarlo en GitHub haciendo <a class="url-main"
+                            href="https://github.com/MDCYT/Simple-Node-Website/issues">click aqui</a> y reportandolo.
+                    </p>
+                </div>
+                <div class="col-sm-6">
+                    <div class="list-group bg-dark">
+                        <div class="btn-group bg-dark" role="group">
+                            <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle bg-dark"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Animales
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                <a class="dropdown-item" href="/dog">Perros Randoms</a>
+                                <a class="dropdown-item" href="/cat">Gatos Randoms</a>
+                                <a class="dropdown-item" href="/bird">Aves Randoms</a>
+                                <a class="dropdown-item" href="/fox">Zorros Randoms UwU</a>
+                                <a class="dropdown-item" href="/bear">Osos Randoms</a>
+                                <a class="dropdown-item" href="/koala">Koalas Randoms</a>
+                                <a class="dropdown-item" href="/panda">Pandas Randoms</a>
+                                <a class="dropdown-item" href="/redpanda">Pandas Rojos Randoms</a>
+                            </div>
+                        </div>
+                        <a type="button" class="btn btn-secondary bg-dark" href="/binary">Convertidor Binario</a>
+                        <a type="button" class="btn btn-secondary bg-dark" href="/translate">Traductor</a>
+                    </div>
+                </div>
             </div>
-            <div class="col-sm-6">
-                <div class="list-group bg-dark">
-                    <div class="btn-group bg-dark" role="group">
-                        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle bg-dark"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Animales
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                            <a class="dropdown-item" href="/dog">Perros Randoms</a>
-                            <a class="dropdown-item" href="/cat">Gatos Randoms</a>
-                            <a class="dropdown-item" href="/bird">Aves Randoms</a>
-                            <a class="dropdown-item" href="/fox">Zorros Randoms UwU</a>
-                            <a class="dropdown-item" href="/bear">Osos Randoms</a>
-                            <a class="dropdown-item" href="/koala">Koalas Randoms</a>
-                            <a class="dropdown-item" href="/panda">Pandas Randoms</a>
-                            <a class="dropdown-item" href="/redpanda">Pandas Rojos Randoms</a>
+        </div>
+        <!-- Seccion tres-->
+        <div class="container-fluid" id="about">
+            <div class="row bg-dark text-white p-5 text-center">
+                <div class="col-sm-6">
+                    <i class="fas fa-chart-pie fa-10x animate__bounceIn"></i>
+                </div>
+                <div class="col sm-6">
+                    <h3>Composición de este proyecto</h3>
+                    <p>Este proyecto esta compuesto por Node.js (JavaScript), HTML5 y CSS, aqui podras ver en que
+                        porcentaje esta compuesto cada cosa:</p>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger"
+                            role="progressbar" style="width: <%= html %>" aria-valuemin="0" aria-valuemax="100">HTML <%= html %>
+                        </div>
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar"
+                            style="width: <%= javascript %>" aria-valuemin="0" aria-valuemax="100">JavaScript <%= javascript %>
+                        </div>
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                            style="width: <%= css %>" aria-valuemin="0" aria-valuemax="100">CSS <%= css %></div>
+                    </div>
+                    <br>
+                    <div class="lista-lenguajes">
+                        <div class="lenguaje">
+                            <span class="far fa-circle html-icon"></span>
+                            <span class="text-lenguaje">HTML</span>
+                            <span class="text-lenguaje-porcentaje"><%= html %></span>
+                        </div>
+                        <br>
+                        <div class="lenguaje">
+                            <span class="far fa-circle javascript-icon"></span>
+                            <span class="text-lenguaje">JavaScript</span>
+                            <span class="text-lenguaje-porcentaje"><%= javascript %></span>
+                        </div>
+                        <br>
+                        <div class="lenguaje">
+                            <span class="far fa-circle css-icon"></span>
+                            <span class="text-lenguaje">CSS</span>
+                            <span class="text-lenguaje-porcentaje"><%= css %></span>
                         </div>
                     </div>
-                    <a type="button" class="btn btn-secondary bg-dark" href="/binary">Convertidor Binario</a>
-                    <a type="button" class="btn btn-secondary bg-dark" href="/translate">Traductor</a>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Seccion tres-->
-    <div class="container-fluid" id="about">
-        <div class="row bg-dark text-white p-5 text-center">
-            <div class="col-sm-6">
-                <i class="fab fa-discord fa-10x animate__bounceIn"></i>
-            </div>
-            <div class="col sm-6">
-                <h3>Una perfecta plataforma para comunicarse entre amigos</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, doloribus corrupti excepturi facere
-                    aliquam deserunt cumque voluptatibus doloremque recusandae illum inventore odit laboriosam impedit
-                    eum reiciendis accusantium quaerat deleniti a. Explicabo dicta quibusdam iusto voluptatem veniam ex
-                    aliquid amet laborum.</p>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar"
-                        style="width: 75.1%" aria-valuenow="75.1" aria-valuemin="0" aria-valuemax="100">HTML 75.1%</div>
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar"
-                        style="width: 20.2%" aria-valuenow="20.2" aria-valuemin="0" aria-valuemax="100">JavaScript 20.2%
-                    </div>
-                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                        style="width: 4.7%" aria-valuenow="4.7" aria-valuemin="0" aria-valuemax="100">CSS 4.7%</div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <%- include ('partials/footer.html')%>
+        <%- include ('partials/footer.html')%>
 
 
 </body>
