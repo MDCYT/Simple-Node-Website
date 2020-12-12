@@ -1,7 +1,7 @@
 {
   "name": "my-first-website",
-  "version": "0.0.10",
-  "description": "Una pagina web simple en Node.js",
+  "version": "0.2.0",
+  "description": "Una pagina web simple en Node.js con algunas funciones adicionales",
   "main": "index.js",
   "scripts": {
     "start": "node src",
