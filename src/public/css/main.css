@@ -39,6 +39,15 @@ div.traductor-left {
     text-align: justify;
 }
 
+
+div.binary {
+    padding: 10px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+}
+
 div.traductor-right {
     padding: 10px;
     float: right;
@@ -118,9 +127,16 @@ div.traductor-right {
         margin: 5px;
         display:inline-block;
     }
+    div.binary {
+    padding: 10px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+}
   }
 
-  @media only screen and (max-width: 304px) {
+  @media only screen and (max-width: 320px) {
     footer {
         position: fixed;
         height: 80px;
@@ -129,8 +145,15 @@ div.traductor-right {
         margin-bottom: 80px;
     }      
   }
+  div.binary {
+  padding: 6px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+}
 
-  @media only screen and (max-width: 206px) {
+  @media only screen and (max-width: 280px) {
     footer {
         position: fixed;
         height: 120px;
@@ -138,4 +161,12 @@ div.traductor-right {
     body {
         margin-bottom: 120px;
     } 
+    
+    div.binary {
+        padding: 2px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: justify;
+    }
   }
