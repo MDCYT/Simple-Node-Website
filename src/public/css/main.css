@@ -116,6 +116,12 @@ div.traductor-right {
 .lista-lenguajes{
     text-align: left;
 }
+
+.logo-image {
+    width: 100%;
+    height: auto;
+}
+
 @media only screen and (max-width: 767px) {
     div.traductor-left {
         width: 100%; 
