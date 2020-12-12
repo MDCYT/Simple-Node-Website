@@ -9,7 +9,7 @@ body {
     background: linear-gradient(to right, #24243e, #302b63, #0f0c29);   
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    margin-bottom: 40px;
+    margin-bottom: 52px;
 }
 
 footer {
@@ -22,7 +22,7 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 40px;
+    height: 52px;
 }
 
 a.button-animals {
@@ -46,16 +46,25 @@ div.traductor-right {
     text-align: justify;
 }
 
+.footer-link {
+    text-decoration:none;
+}
+
+.footer-link:hover {
+    text-decoration-color: #ffffff;
+    color: #3498DB ;
+}
+
 @media only screen and (max-width: 767px) {
     div.traductor-left {
         width: 100%; 
-        margin:5px;
-        display:inline-block
+        margin: 5px;
+        display:inline-block;
     }
     div.traductor-right {
         width: 100%; 
-        margin:5px;
-        display:inline-block
+        margin: 5px;
+        display:inline-block;
     }
   }
 
