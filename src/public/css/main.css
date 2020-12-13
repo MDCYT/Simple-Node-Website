@@ -118,12 +118,14 @@ div.traductor-right {
 }
 
 .logo-image {
-    width: 250px;
+    width: 100%;
+    max-width: 250px;
     height: auto;
 }
 
 .responsive-icons {
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
     height: auto;
 }
 
