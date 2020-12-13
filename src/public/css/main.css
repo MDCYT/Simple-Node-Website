@@ -118,7 +118,12 @@ div.traductor-right {
 }
 
 .logo-image {
-    width: 100%;
+    width: 250px;
+    height: auto;
+}
+
+.responsive-icons{
+    width: 350px;
     height: auto;
 }
 
