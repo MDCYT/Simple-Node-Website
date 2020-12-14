@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const morgan = require("morgan")
 require('dotenv').config()
 
 const indexRoutes = require('./routes/index')
@@ -11,6 +12,7 @@ app.set('views', path.join(__dirname,'views'))
 app.engine('html', require('ejs').renderFile)
 app.set('view engine', 'ejs')
 app.set('json spaces', 2)
+app.use(morgan('dev'))
 
 //Verificaciones Previas
 
