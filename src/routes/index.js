@@ -6,7 +6,7 @@ const utils = require('discord-utilities-js')
 
 
 router.get('/', (req, res) => {
-    res.render('index.html', { title: "Mi Primera Pagina", description: "La pagina de Inicio de este proyecto de GitHub", html: "72.3%", css: "8.8%", javascript: "18.9%" })
+    res.render('index.html', { title: "Mi Primera Pagina", description: "La pagina de Inicio de este proyecto de GitHub", html: "71.5%", css: "9.8%", javascript: "18.7%" })
 });
 
 router.get('/contact', (req, res) => {
