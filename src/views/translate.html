@@ -1,105 +1,118 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
+  <head>
     <%- include ('partials/head.html')%>
-    <meta name="description" content="<%= description %>">
+    <meta name="description" content="<%= description %>" />
     <meta property="og:description" content="<%= description %>" />
     <title><%= title %></title>
     <meta property="og:title" content="<%= title %>" />
-</head>
+  </head>
 
-<body>
-
+  <body>
     <%- include ('partials/navigation.html')%>
 
     <div class="container p-5">
-        <div class="row">
-            <div class="traductor-left">
-                <div class="card animate__animated animate__flipInY">
-                    <div class="card-header bg-dark text-white text-center">
-                        <h3>Traductor</h3>
-                    </div>
-                    <div class="card-body">
-                        <form action="/translate">
-                            <div class="form-group">
-                                <select class="form-control" name="entrada" value="" id="" placeholder="Idioma Original" required>
-                                    <option selected disabled value="">Selecione el Idioma de Origen</option>
-                                    <option value="au">Automatico (80% Fiable)</option>
-                                    <option value="es">Español</option>
-                                    <option value="en">Ingles</option>
-                                    <option value="ru">Ruso</option>
-                                    <option value="ko">Coreano</option>
-                                    <option value="ja">Japonés</option>
-                                    <option value="zh">Chino</option>
-                                    <option value="sv">Sueco</option>
-                                    <option value="ar">Arabe</option>
-                                    <option value="bg">Bulgaro</option>
-                                    <option value="da">Danes</option>
-                                    <option value="de">Alemán</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <select class="form-control" name="salida" value="" id="" required>
-                                    <option selected disabled value="">Selecione el Idioma a Traducir</option>
-                                    <option value="es">Español</option>
-                                    <option value="en">Ingles</option>
-                                    <option value="ru">Ruso</option>
-                                    <option value="ko">Coreano</option>
-                                    <option value="ja">Japonés</option>
-                                    <option value="zh">Chino</option>
-                                    <option value="sv">Sueco</option>
-                                    <option value="ar">Arabe</option>
-                                    <option value="bg">Bulgaro</option>
-                                    <option value="da">Danes</option>
-                                    <option value="de">Alemán</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control" name="text" value="" id="" cols="30" rows="10"
-                                    placeholder="Mensaje" required></textarea>
-                            </div>
-                            <div class="form-group">
-                                <button class="btn btn-primary btn-block">
-                                    Convertir
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                    
-                </div>
+      <div class="row">
+        <div class="traductor-left">
+          <div class="card animate__animated animate__flipInY">
+            <div class="card-header bg-dark text-white text-center">
+              <h3>Traductor</h3>
             </div>
-            <div class="traductor-right">
-                <div class="card animate__animated animate__flipInY">
-                    <div class="card-header bg-dark text-white text-center">
-                        <h3>Resultado</h3>
-                    </div>
-                    <div class="list-group">
-                        <a class="list-group-item list-group-item-action">
-                          <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-0">
-                                Mensaje Original
-                            </h5>
-                          </div>
-                          <p class="mb-0">
-                              <%= texto %></p>
-                        </a>
-                        <a class="list-group-item list-group-item-action">
-                            <div class="d-flex w-100 justify-content-between">
-                              <h5 class="mb-1">
-                                  Mensaje Traducido
-                              </h5>
-                            </div>
-                            <p class="mb-1"><%= respuesta %></p>
-                          </a>
-                      </div>
+            <div class="card-body">
+              <form action="/translate">
+                <div class="form-group">
+                  <select
+                    class="form-control"
+                    name="entrada"
+                    value=""
+                    id=""
+                    placeholder="Idioma Original"
+                    required
+                  >
+                    <option selected disabled value="">
+                      Selecione el Idioma de Origen
+                    </option>
+                    <option value="au">Automatico (80% Fiable)</option>
+                    <option value="es">Español</option>
+                    <option value="en">Ingles</option>
+                    <option value="ru">Ruso</option>
+                    <option value="ko">Coreano</option>
+                    <option value="ja">Japonés</option>
+                    <option value="zh">Chino</option>
+                    <option value="sv">Sueco</option>
+                    <option value="ar">Arabe</option>
+                    <option value="bg">Bulgaro</option>
+                    <option value="da">Danes</option>
+                    <option value="de">Alemán</option>
+                  </select>
                 </div>
+                <div class="form-group">
+                  <select
+                    class="form-control"
+                    name="salida"
+                    value=""
+                    id=""
+                    required
+                  >
+                    <option selected disabled value="">
+                      Selecione el Idioma a Traducir
+                    </option>
+                    <option value="es">Español</option>
+                    <option value="en">Ingles</option>
+                    <option value="ru">Ruso</option>
+                    <option value="ko">Coreano</option>
+                    <option value="ja">Japonés</option>
+                    <option value="zh">Chino</option>
+                    <option value="sv">Sueco</option>
+                    <option value="ar">Arabe</option>
+                    <option value="bg">Bulgaro</option>
+                    <option value="da">Danes</option>
+                    <option value="de">Alemán</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <textarea
+                    class="form-control"
+                    name="text"
+                    value=""
+                    id=""
+                    cols="30"
+                    rows="10"
+                    placeholder="Mensaje"
+                    required
+                  ></textarea>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-primary btn-block">Convertir</button>
+                </div>
+              </form>
             </div>
+          </div>
         </div>
+        <div class="traductor-right">
+          <div class="card animate__animated animate__flipInY">
+            <div class="card-header bg-dark text-white text-center">
+              <h3>Resultado</h3>
+            </div>
+            <div class="list-group">
+              <a class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-0">Mensaje Original</h5>
+                </div>
+                <p class="mb-0"><%= texto %></p>
+              </a>
+              <a class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">Mensaje Traducido</h5>
+                </div>
+                <p class="mb-1"><%= respuesta %></p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <%- include ('partials/footer.html')%>
-
-</body>
-
+  </body>
 </html>

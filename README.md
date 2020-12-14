@@ -75,7 +75,10 @@ Primero debemos cambiar el nombre del archivo **.env.example** por **.env**
 El archivo **.env** se debe ver algo asi
 
 ```env
-PORT=3000 ///Aqui podras cambiar el puerto del proyecto
+#Aqui podras cambiar el puerto del proyecto
+PORT=3000
+#Aqui podras cambiar si quieres quetu proyecto tenga redirección https o no
+SSL=false
 ```
 
 ## Usos

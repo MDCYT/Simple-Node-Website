@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
+  <head>
     <%- include ('partials/head.html')%>
-    <meta name="description" content="<%= description %>">
+    <meta name="description" content="<%= description %>" />
     <meta property="og:description" content="<%= description %>" />
     <title><%= title %></title>
     <meta property="og:title" content="<%= title %>" />
-</head>
+  </head>
 
-<body>
-
+  <body>
     <%- include ('partials/navigation.html')%>
 
-   <div class="container">
-       <header class="row">
-          <div class="col-lg-12 text-center animal-image">
-              <img src="<%= image %>" class="animate__bounceIn animal-image-responsive" alt="Pajaro">
-          </div>
-          <a class="btn btn-outline-primary center text-center button-animals" href="/bird">Recargar</a>
-       </header>
-   </div>
+    <div class="container">
+      <header class="row">
+        <div class="col-lg-12 text-center animal-image">
+          <img
+            src="<%= image %>"
+            class="animate__bounceIn animal-image-responsive"
+            alt="Pajaro"
+          />
+        </div>
+        <a
+          class="btn btn-outline-primary center text-center button-animals"
+          href="/bird"
+          >Recargar</a
+        >
+      </header>
+    </div>
 
-   <%- include ('partials/footer.html')%>
-
-
-</body>
-
+    <%- include ('partials/footer.html')%>
+  </body>
 </html>

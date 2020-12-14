@@ -1,52 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
+  <head>
     <%- include ('partials/head.html')%>
-    <meta name="description" content="<%= description %>">
+    <meta name="description" content="<%= description %>" />
     <meta property="og:description" content="<%= description %>" />
     <title><%= title %></title>
     <meta property="og:title" content="<%= title %>" />
-</head>
+  </head>
 
-<body>
-
+  <body>
     <%- include ('partials/navigation.html')%>
 
     <div class="container p-5">
-        <div class="row">
-            <div class="binary">
-                <div class="card animate__animated animate__flipInY">
-                    <div class="card-header bg-dark text-white text-center">
-                        <h3>Convertidor Binario</h3>
-                    </div>
-                    <div class="list-group">
-                        <a class="list-group-item list-group-item-action">
-                          <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-1">
-                                <%= entrada %>
-                            </h5>
-                          </div>
-                          <p class="mb-1">
-                              <%= texto %></p>
-                        </a>
-                        <a class="list-group-item list-group-item-action">
-                            <div class="d-flex w-100 justify-content-between">
-                              <h5 class="mb-1">
-                                  <%= salida %>
-                              </h5>
-                            </div>
-                            <p class="mb-1"><%= binario %></p>
-                          </a>
-                      </div>
-                </div>
+      <div class="row">
+        <div class="binary">
+          <div class="card animate__animated animate__flipInY">
+            <div class="card-header bg-dark text-white text-center">
+              <h3>Convertidor Binario</h3>
             </div>
+            <div class="list-group">
+              <a class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1"><%= entrada %></h5>
+                </div>
+                <p class="mb-1"><%= texto %></p>
+              </a>
+              <a class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1"><%= salida %></h5>
+                </div>
+                <p class="mb-1"><%= binario %></p>
+              </a>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
-   <%- include ('partials/footer.html')%>
-
-
-</body>
-
+    <%- include ('partials/footer.html')%>
+  </body>
 </html>
