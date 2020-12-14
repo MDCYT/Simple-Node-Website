@@ -4,7 +4,7 @@
 
 Este proyecto de [GitHub](https://github.com/MDCYT/Simple-Node-Website) esta diseñado para que cualquier persona lo use como base para crear sus propias paginas web o proyectos como deseen.
 
-Tambien puedes probarlo desde este [link](https://shrouded-ravine-38499.herokuapp.com).
+Tambien puedes probarlo desde este [link](https://morning-trail-sunshine.glitch.me).
 
 ### Secciones:
 Aqui encontraras secciones utiles de como user este proyecto de GitHub:
