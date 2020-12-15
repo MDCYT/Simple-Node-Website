@@ -168,6 +168,16 @@ div.traductor-right {
 @media only screen and (max-width: 319px) {
   footer {
     position: fixed;
+    height: 40px;
+  }
+  body {
+    margin-bottom: 40px;
+  }
+}
+
+@media only screen and (max-width: 299px) {
+  footer {
+    position: fixed;
     height: 80px;
   }
   body {
@@ -183,7 +193,7 @@ div.binary {
   text-align: justify;
 }
 
-@media only screen and (max-width: 279px) {
+@media only screen and (max-width: 200px) {
   footer {
     position: fixed;
     height: 120px;
